@@ -1,4 +1,5 @@
 import React from 'react'
+import CommentList from "./CommentList";
 
 class Article extends React.Component {
     constructor(props){
@@ -8,13 +9,15 @@ class Article extends React.Component {
         const title = this.props.title;
         const content = this.props.content;
         const imgUrl = this.props.imgUrl;
+
         return(
-            <div>
+            <div className='mainDiv'>
                 <h1>{title}</h1>
                 <p>{content}</p>
                 <img src={imgUrl} alt={'React'}/>
-
+                <CommentList/>
             </div>
+
         )
     }
 }
